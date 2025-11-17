@@ -7,17 +7,17 @@ class PostCortex < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/julymetodiev/post-cortex/releases/download/v#{version}/post-cortex-macos-x64"
-      sha256 "PUT_SHA256_HERE_AFTER_FIRST_RELEASE"
+      sha256 "4daa90e1b9e1ba21485f1cd9144e2051cee9a7ca4366e8bd6b6a5b0517cd491b"
     else
       url "https://github.com/julymetodiev/post-cortex/releases/download/v#{version}/post-cortex-macos-arm64"
-      sha256 "PUT_SHA256_HERE_AFTER_FIRST_RELEASE"
+      sha256 "079c69d042c9254d51466ab73246420b161c384690aae4908f4f2a26daffbfef"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/julymetodiev/post-cortex/releases/download/v#{version}/post-cortex-linux-x64"
-      sha256 "PUT_SHA256_HERE_AFTER_FIRST_RELEASE"
+      sha256 "b13c9891b85058c56a2c2f83452597624a92193ab0d60843c7a0ff925727139d"
     end
   end
 
