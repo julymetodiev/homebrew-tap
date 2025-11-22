@@ -10,7 +10,7 @@ class PostCortex < Formula
       sha256 "66b0905cbcd845cbbff7f552a52a2a81b098beec76e87414333d03b63275d63a"
 
       resource "daemon" do
-        url "https://github.com/julymetodiev/post-cortex/releases/download/v#{version}/post-cortex-daemon-x86_64-apple-darwin"
+        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.2/post-cortex-daemon-x86_64-apple-darwin"
         sha256 "e87cefe212721900531c6a987bb837a09bb148229986b4be5aa155189dfdc70c"
       end
     else
@@ -18,7 +18,7 @@ class PostCortex < Formula
       sha256 "8cf7baaa2c65562366e03b2e2194c275d601a47aabb8488395c0aabda453036c"
 
       resource "daemon" do
-        url "https://github.com/julymetodiev/post-cortex/releases/download/v#{version}/post-cortex-daemon-aarch64-apple-darwin"
+        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.2/post-cortex-daemon-aarch64-apple-darwin"
         sha256 "a4ceb0a2163534c11ea77cc27eb5c84e9653b213202cab2a7858f3b4d8540773"
       end
     end
@@ -30,7 +30,7 @@ class PostCortex < Formula
       sha256 "7b444ce7c2905949774db01c4e1ae06b5800bb134da153791c13757d1e8abb1d"
 
       resource "daemon" do
-        url "https://github.com/julymetodiev/post-cortex/releases/download/v#{version}/post-cortex-daemon-x86_64-unknown-linux-gnu"
+        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.2/post-cortex-daemon-x86_64-unknown-linux-gnu"
         sha256 "ed214cd8250f7dbdb0b36812c59293a23162a5282b393d7bd3174ea2c792d170"
       end
     end
