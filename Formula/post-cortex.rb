@@ -5,32 +5,32 @@ class PostCortex < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.3/post-cortex-x86_64-apple-darwin"
-      sha256 "cdff56eeb35e6e06f8037bc7cff4a8bda1a86a43517912d98b5525488f3331f0"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-x86_64-apple-darwin"
+      sha256 "8360f9edb80b216d769338c5d15c693503ed5a8039611f40b470e8e94989564f"
 
       resource "daemon" do
-        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.3/post-cortex-daemon-x86_64-apple-darwin"
-        sha256 "9ea9387e695aa69e6d1c1859d683928cc7960f516ab3873f7efa3d9e0613df46"
+        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-daemon-x86_64-apple-darwin"
+        sha256 "1cd2ea5fb82948a1a743aaf231887016811705f18f4e6be7140b3c136dc181d1"
       end
     else
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.3/post-cortex-aarch64-apple-darwin"
-      sha256 "f334832d8fd8a8521d14bde7fa1c7f29dfab2514fae98e74ac4a5d2aa8ef437b"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-aarch64-apple-darwin"
+      sha256 "ddeb32474952c317fbc1754ffab7a309353886d508ffd17401bbc06949c57e74"
 
       resource "daemon" do
-        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.3/post-cortex-daemon-aarch64-apple-darwin"
-        sha256 "9ba23ddc2f54eb09f521d9af7584636f7d5459bffa943d280331db7fd6c7db05"
+        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-daemon-aarch64-apple-darwin"
+        sha256 "2ddd9e264367f7179b85b0d6d51711cb9c2c2023912f7dff564a47fc3769176f"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.3/post-cortex-x86_64-unknown-linux-gnu"
-      sha256 "58b663a54c3efb3231bd0d78e863d74e81c7f9a614a4faefca7b19849e7ed359"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-x86_64-unknown-linux-gnu"
+      sha256 "ff15652a77d7442ad03a9cbc15c8f79f36ad4138aca7938d4c473009a934c984"
 
       resource "daemon" do
-        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.3/post-cortex-daemon-x86_64-unknown-linux-gnu"
-        sha256 "82c10341a3d483e906b1c76204a256edbdb5b734b94cc33063d4ade009ea35c5"
+        url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-daemon-x86_64-unknown-linux-gnu"
+        sha256 "6bbf8ff941b41ae4460cd4e3b45adb945cb5dcbeee03ba4a99dfa170336ab11b"
       end
     end
   end
