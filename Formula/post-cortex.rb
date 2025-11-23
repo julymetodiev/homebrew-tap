@@ -6,19 +6,19 @@ class PostCortex < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-x86_64-apple-darwin"
-      sha256 "8360f9edb80b216d769338c5d15c693503ed5a8039611f40b470e8e94989564f"
+      sha256 "181addfe16b01d77ab69ea5fe26cc615617dc0083e53a064cf113b7b1dc511d3"
 
       resource "daemon" do
         url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-daemon-x86_64-apple-darwin"
-        sha256 "1cd2ea5fb82948a1a743aaf231887016811705f18f4e6be7140b3c136dc181d1"
+        sha256 "d02aaf31925f83945b553f539a21ba4f55ae556bb8741cbafa628189cfb86806"
       end
     else
       url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-aarch64-apple-darwin"
-      sha256 "ddeb32474952c317fbc1754ffab7a309353886d508ffd17401bbc06949c57e74"
+      sha256 "937654aaf3fe6b14d2ebc268a0293171b68813c707b1581b6c160927a12e95fc"
 
       resource "daemon" do
         url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-daemon-aarch64-apple-darwin"
-        sha256 "2ddd9e264367f7179b85b0d6d51711cb9c2c2023912f7dff564a47fc3769176f"
+        sha256 "876bd53aea69a0050216e409c6c5b73f6ffe4e641d7797fd3e5e7ebf8c3e4866"
       end
     end
   end
@@ -26,11 +26,11 @@ class PostCortex < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-x86_64-unknown-linux-gnu"
-      sha256 "ff15652a77d7442ad03a9cbc15c8f79f36ad4138aca7938d4c473009a934c984"
+      sha256 "199b3a3ec2ebfcd4ebcbb6f160961b4f592ca3d4fd80411208459d964bd7bfa9"
 
       resource "daemon" do
         url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.4/post-cortex-daemon-x86_64-unknown-linux-gnu"
-        sha256 "6bbf8ff941b41ae4460cd4e3b45adb945cb5dcbeee03ba4a99dfa170336ab11b"
+        sha256 "65218f870422e9416167d38ed72753deebfd800ffe5084bea90582fa49618b94"
       end
     end
   end
