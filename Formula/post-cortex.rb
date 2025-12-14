@@ -6,17 +6,17 @@
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.10/pcx-x86_64-apple-darwin"
-      sha256 "55bbdf3c488d9907d76653d74880ef3772385b9ec7c25dfef6ab2fd3889fb55c"
+      sha256 "c85e8e2433a65cbb090d626d00fa4bf02b734a6dc07e02788ba41ee41736455b"
     else
       url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.10/pcx-aarch64-apple-darwin"
-      sha256 "d717a57b1ec6b0efc9f638918867fb354485914507dcdb4ce0ef443e84aad5ac"
+      sha256 "012c4b3a526f8bba0c513962ab9824f50ce073e4c11462e0d484c1c10c6be7f2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.10/pcx-x86_64-unknown-linux-gnu"
-      sha256 "3d5dce5d57ef2cc7424d8245b1b95550e319fa8cd772d8d07f3c848353f56ed0"
+      sha256 "f44f197409ff49a17a556db3939f1d6a51283fbe83daace827f75f7b0f06b7c8"
     end
   end
 
