@@ -1,22 +1,22 @@
-class PostCortex < Formula
+ class PostCortex < Formula
   desc "Production-grade intelligent conversation memory system for AI assistants"
   homepage "https://github.com/julymetodiev/post-cortex"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.9/pcx-x86_64-apple-darwin"
-      sha256 "63d181f3fbf166a7dd5d1c2d52abf4f3e970f6c04ddeed6fa627080cb617a70c"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.10/pcx-x86_64-apple-darwin"
+      sha256 "55bbdf3c488d9907d76653d74880ef3772385b9ec7c25dfef6ab2fd3889fb55c"
     else
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.9/pcx-aarch64-apple-darwin"
-      sha256 "4e74206ca29dc65544588edfd739d9641a228a467dc3fcf1d36021af366da1dd"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.10/pcx-aarch64-apple-darwin"
+      sha256 "d717a57b1ec6b0efc9f638918867fb354485914507dcdb4ce0ef443e84aad5ac"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.9/pcx-x86_64-unknown-linux-gnu"
-      sha256 "e00250ecc67ff8e3c6cb94227604caba917ec66555c6074ae45e27bf42890634"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.10/pcx-x86_64-unknown-linux-gnu"
+      sha256 "3d5dce5d57ef2cc7424d8245b1b95550e319fa8cd772d8d07f3c848353f56ed0"
     end
   end
 
