@@ -5,18 +5,18 @@
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.12/pcx-x86_64-apple-darwin"
-      sha256 "f9efa746af3298fc700c10581250173223d71d1bbefd01448c61009e12e2a590"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.13/pcx-x86_64-apple-darwin"
+      sha256 "c00676e1314de4a4ef62d7b31dafe308ae5bef13f5c1b2890cd8df10b1074b34"
     else
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.12/pcx-aarch64-apple-darwin"
-      sha256 "b025dc19b06c210a2290870508f504408fac15a225d8b9f9e6cb2bed1ac4eb69"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.13/pcx-aarch64-apple-darwin"
+      sha256 "b589bd391e4a321bddb56ae855c94ef13b2b19268d8a0699c9971b8058f88e49"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.12/pcx-x86_64-unknown-linux-gnu"
-      sha256 "45b46991590da2e72b73405a4a6fb2d42597babf7792f5669b8e6b6d3b4fbfad"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.13/pcx-x86_64-unknown-linux-gnu"
+      sha256 "e817dd1600021d6bf48c7fd71aa75cfa9a16491464360882ec7d6cb023ff9a1d"
     end
   end
 
