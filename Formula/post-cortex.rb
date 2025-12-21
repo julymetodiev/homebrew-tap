@@ -45,12 +45,12 @@
           }
         }
       }
-
-      For SSE:
+      For HTTP:
       {
         "mcpServers": {
           "post-cortex": {
-            "url": "http://localhost:3737/sse"
+            "type": "http",
+            "url": "http://localhost:3737/mcp"
           }
         }
       }
