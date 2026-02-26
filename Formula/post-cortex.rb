@@ -5,18 +5,18 @@
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.19/pcx-x86_64-apple-darwin"
-      sha256 "48f04ef7074cbaf9ce85aa5efd5ac7bc14f9c95c23b194c13a7c2350f011d547"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.21/pcx-x86_64-apple-darwin"
+      sha256 "7efbb7b19a0b3c7dfa92fdbb3a2ed00d4dcfd57dfedb5fe710f19b947f705f71"
     else
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.19/pcx-aarch64-apple-darwin"
-      sha256 "04b3233b357814cd7875bcd15a8abae891cc6f03facc988e70d2406545663c9a"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.21/pcx-aarch64-apple-darwin"
+      sha256 "642078da69f53ddf233f3455c008bf05866c724c4554d189c311372681fe0d81"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.19/pcx-x86_64-unknown-linux-gnu"
-      sha256 "7d36e72b06d7aeb8714bb8aee8a7852647111b7165ce967b1227857cc344f14d"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.21/pcx-x86_64-unknown-linux-gnu"
+      sha256 "aab20babe4d793899756eb3e9ba0035e82e7fa763bd46acbea7a96b7a0846fad"
     end
   end
 
@@ -35,7 +35,19 @@
     <<~EOS
       Post-Cortex has been installed:
 
-      Add to Claude Desktop config (~/.claude.json):
+      1. Configure MCP (once, globally)
+
+      HTTP transport (recommended, requires daemon running)
+      claude mcp add --scope user --transport http post-cortex http://127.0.0.1:3737/mcp
+
+      Or stdio transport (no daemon needed)
+      claude mcp add --scope user --transport stdio post-cortex -- pcx
+
+      This registers Post-Cortex for all projects on your machine.
+
+      2. Set Up Your Project
+
+      pcx setup
 
       For stdio:
       {
