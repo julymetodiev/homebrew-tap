@@ -1,22 +1,22 @@
  class PostCortex < Formula
-  desc "Production-grade intelligent conversation memory system for AI assistants"
+  desc "Post-Cortex is an MCP server that gives AI assistants long-term memory. It stores conversations, decisions, and insights in a searchable knowledge base with automatic entity extraction."
   homepage "https://github.com/julymetodiev/post-cortex"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.16/pcx-x86_64-apple-darwin"
-      sha256 "cff993ca3205acf2f73b7a35e09774390438799db1b293952ab2f8808c6269c4"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.19/pcx-x86_64-apple-darwin"
+      sha256 "48f04ef7074cbaf9ce85aa5efd5ac7bc14f9c95c23b194c13a7c2350f011d547"
     else
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.16/pcx-aarch64-apple-darwin"
-      sha256 "fd4bc9a2098d04139df3d0cd63612b7f02ad69ed744c2e0f49a6dc83fc049fac"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.19/pcx-aarch64-apple-darwin"
+      sha256 "04b3233b357814cd7875bcd15a8abae891cc6f03facc988e70d2406545663c9a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.16/pcx-x86_64-unknown-linux-gnu"
-      sha256 "5a96c6cf72979fa3fca07cba7b8031f5be35754bfd5d5582c3ca96ee88ac9dc7"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.1.19/pcx-x86_64-unknown-linux-gnu"
+      sha256 "7d36e72b06d7aeb8714bb8aee8a7852647111b7165ce967b1227857cc344f14d"
     end
   end
 
@@ -56,7 +56,7 @@
       }
 
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      📚 Full Documentation: https://github.com/julymetodiev/post-cortex
+      Full Documentation: https://github.com/julymetodiev/post-cortex
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     EOS
   end
