@@ -1,20 +1,20 @@
 class VelesCli < Formula
   desc "CLI binary for Veles code search"
   homepage "https://github.com/julymetodiev/Veles"
-  version "0.4.1"
+  version "0.4.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/julymetodiev/Veles/releases/download/v0.4.1/veles-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "cbe3b74e9374e728588a5393b844b351c7f2649bede77e02285a0bd53b739a09"
+      url "https://github.com/julymetodiev/Veles/releases/download/v0.4.2/veles-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a0c8c767849314f23092151d025a256c4b7444c2d8bc5f90892a96b8cf3d2274"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/Veles/releases/download/v0.4.1/veles-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "9682e64da2bbc8097bb571710ddb17707f802a776aa0d9d5101ac934727095c5"
+      url "https://github.com/julymetodiev/Veles/releases/download/v0.4.2/veles-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "bbfe91c226ad526810bf24086abae92a38f668a918d2af0049ff9e4da8669b9c"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/julymetodiev/Veles/releases/download/v0.4.1/veles-cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "5338e9b5efb33c732e91617f15a3a4bf90daf36be446db25bb1105313c778177"
+    url "https://github.com/julymetodiev/Veles/releases/download/v0.4.2/veles-cli-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "d722dbf5eeeab314cad5633d8925450d207d50a7bf39432a7d04e3f89cdc844a"
   end
   license "MIT"
 
