@@ -1,22 +1,22 @@
- class PostCortex < Formula
-  desc "Post-Cortex is an MCP server that gives AI assistants long-term memory. It stores conversations, decisions, and insights in a searchable knowledge base with automatic entity extraction."
+class PostCortex < Formula
+  desc "MCP server that gives AI assistants long-term, searchable memory"
   homepage "https://github.com/julymetodiev/post-cortex"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.3.1/pcx-x86_64-apple-darwin"
-      sha256 "sha256:91c0a3009f83c258ddd53e2a1cca23e5643d02b7e18cbbb31f4a096d6cd446ef"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.4.0/pcx-x86_64-apple-darwin"
+      sha256 "fe2291a1216c7f226f06414b0fc6103d8b4f02fffb4fa2c0154ab500619c674c"
     else
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.3.1/pcx-aarch64-apple-darwin"
-      sha256 "sha256:96e8b7abd0a7beecef8a80bad26bf7c0fc7f7cfbf21bad31a32b2d11d3dc3a81"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.4.0/pcx-aarch64-apple-darwin"
+      sha256 "9beb9b77823bc3dde161a662c3276512ef81a000ed89e0bb155c7a9d1a14c876"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.3.1/pcx-x86_64-unknown-linux-gnu"
-      sha256 "sha256:eb0e5e8ad6668cd65817a82e0c71860ff945028f316dfa6a62a75abcfb88bc7a"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.4.0/pcx-x86_64-unknown-linux-gnu"
+      sha256 "74192dd226fd356d74321b1588a333b00ab8eb6c4ca60e012ddebb65609dda1b"
     end
   end
 
@@ -67,6 +67,10 @@
         }
       }
 
+      Upgrading from 0.3.x: back up a SurrealDB backend first (the 0.4 schema
+      change is forward-only). If the daemon binds 0.0.0.0, set allowed_hosts
+      in ~/.post-cortex/daemon.toml, or remote clients get 403.
+
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       Full Documentation: https://github.com/julymetodiev/post-cortex
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -75,7 +79,7 @@
 
   test do
     # Test stdio server
-    assert_predicate bin/"pcx", :exist?
+    assert_path_exists bin/"pcx"
 
     # Test daemon help output
     output = shell_output("#{bin}/pcx help 2>&1")
