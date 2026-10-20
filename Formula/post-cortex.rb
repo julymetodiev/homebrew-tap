@@ -5,18 +5,18 @@ class PostCortex < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.4.0/pcx-x86_64-apple-darwin"
-      sha256 "fe2291a1216c7f226f06414b0fc6103d8b4f02fffb4fa2c0154ab500619c674c"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.5.0/pcx-x86_64-apple-darwin"
+      sha256 "c4210835b52c1a884a48eeb1431566eba73d2e4514a6c05767d65bfc26c9071d"
     else
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.4.0/pcx-aarch64-apple-darwin"
-      sha256 "9beb9b77823bc3dde161a662c3276512ef81a000ed89e0bb155c7a9d1a14c876"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.5.0/pcx-aarch64-apple-darwin"
+      sha256 "b743c5042454a3140e197dc2bcc5ad91fd1223fd838dd28f9b78fe297a763db8"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.4.0/pcx-x86_64-unknown-linux-gnu"
-      sha256 "74192dd226fd356d74321b1588a333b00ab8eb6c4ca60e012ddebb65609dda1b"
+      url "https://github.com/julymetodiev/post-cortex/releases/download/v0.5.0/pcx-x86_64-unknown-linux-gnu"
+      sha256 "c450b64c978fd475ef6856f189550892c354b074b7b3f877ac0eaa4e159ec592"
     end
   end
 
@@ -38,10 +38,11 @@ class PostCortex < Formula
       1. Configure MCP (once, globally)
 
       HTTP transport (recommended, requires daemon running)
-      claude mcp add --scope user --transport http post-cortex http://127.0.0.1:3737/mcp
+      claude mcp add --scope user --transport http post-cortex http://127.0.0.1:3737/mcp \
+        --header "X-PCX-Author: claude-code"
 
       Or stdio transport (no daemon needed)
-      claude mcp add --scope user --transport stdio post-cortex -- pcx
+      claude mcp add --scope user --transport stdio --env PC_AUTHOR=claude-code post-cortex -- pcx
 
       This registers Post-Cortex for all projects on your machine.
 
@@ -67,9 +68,14 @@ class PostCortex < Formula
         }
       }
 
-      Upgrading from 0.3.x: back up a SurrealDB backend first (the 0.4 schema
-      change is forward-only). If the daemon binds 0.0.0.0, set allowed_hosts
-      in ~/.post-cortex/daemon.toml, or remote clients get 403.
+      Upgrading to 0.5: back up a SurrealDB backend first; the daemon adds the
+      full-text index and the message and card tables on start. RocksDB data
+      written by 0.5 is not readable by older binaries.
+      From 0.3.x: the 0.4 schema change is forward-only too, and a daemon bound
+      to 0.0.0.0 needs allowed_hosts in ~/.post-cortex/daemon.toml.
+      This binary has no rerankers (search mode fast); for local or Voyage
+      reranking: cargo install post-cortex-daemon \
+        --features surrealdb-storage,rerank,rerank-voyage
 
       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
       Full Documentation: https://github.com/julymetodiev/post-cortex
