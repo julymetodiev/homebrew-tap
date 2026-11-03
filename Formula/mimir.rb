@@ -1,7 +1,6 @@
 class Mimir < Formula
   desc "Call graph of your project for coding agents, with a live view in the browser"
   homepage "https://github.com/julymetodiev/Mimir"
-  version "0.2.0"
   license "MIT"
 
   on_macos do
