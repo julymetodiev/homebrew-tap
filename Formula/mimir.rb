@@ -5,23 +5,23 @@ class Mimir < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/julymetodiev/Mimir/releases/download/v0.4.1/mimir-v0.4.1-aarch64-apple-darwin.tar.gz"
-      sha256 "50b50e7291b929f8bcee795448dd14eab4e7bafa13be75a133b4f4651430fc1e"
+      url "https://github.com/julymetodiev/Mimir/releases/download/v0.5.0/mimir-v0.5.0-aarch64-apple-darwin.tar.gz"
+      sha256 "b343649918cb7c07d248861c20d3961777a0416b989bf3200c5ab024749a3de3"
     end
     on_intel do
-      url "https://github.com/julymetodiev/Mimir/releases/download/v0.4.1/mimir-v0.4.1-x86_64-apple-darwin.tar.gz"
-      sha256 "58afec9d6b2092b13fb0a4e38b821d6c87dd0b5f04f68b282c302fcf27385880"
+      url "https://github.com/julymetodiev/Mimir/releases/download/v0.5.0/mimir-v0.5.0-x86_64-apple-darwin.tar.gz"
+      sha256 "8cc66aa39c4a178a354f607ea9a7e9409acd2f4f585154e7595a174a4353b4e2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/julymetodiev/Mimir/releases/download/v0.4.1/mimir-v0.4.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7df76b8f97bafe65f2f92686df5e1bd17c10791756420a9f393cb4951b95bc67"
+      url "https://github.com/julymetodiev/Mimir/releases/download/v0.5.0/mimir-v0.5.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "d8c789a866c0c68abba14aa3553e996e1107e5a64093919eccf7104a7ca0aefb"
     end
     on_intel do
-      url "https://github.com/julymetodiev/Mimir/releases/download/v0.4.1/mimir-v0.4.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f8989b26b6f9108fe1cb60ee6f3381f845c4bd49d5700daa5dd30a48e9e0be3a"
+      url "https://github.com/julymetodiev/Mimir/releases/download/v0.5.0/mimir-v0.5.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "890aa74dce3724bca27dc3c167076073d46984b15877ef670e06c8cd0303a1d3"
     end
   end
 
@@ -32,7 +32,8 @@ class Mimir < Formula
   def caveats
     <<~EOS
       For exact answers, Mimir needs rust-analyzer for Rust, tsrs for TypeScript and JavaScript,
-      pyrefly for Python, and go with scip-go and gopls for Go:
+      pyrefly for Python, go with scip-go and gopls for Go, and clangd with clangd-indexer for
+      C and C++, from https://github.com/clangd/clangd/releases:
         rustup component add rust-analyzer rust-src
         npm install -g tsrs
         pipx install pyrefly
