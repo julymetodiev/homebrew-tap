@@ -5,23 +5,23 @@ class LanternLattice < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.1/latt-v0.6.1-aarch64-apple-darwin.tar.gz"
-      sha256 "dce34c406f9eaee1ecc988d6c4eae58df10883579f0862f8f98ef209c442a2b8"
+      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.2/latt-v0.6.2-aarch64-apple-darwin.tar.gz"
+      sha256 "164f7185a2fcd13a79da98c26c9989fb717e796e260ac36dc27ce91f479410d5"
     end
     on_intel do
-      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.1/latt-v0.6.1-x86_64-apple-darwin.tar.gz"
-      sha256 "d01821a104d84ed025d57bf8d7b15303b480131e19738484d600d35071803377"
+      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.2/latt-v0.6.2-x86_64-apple-darwin.tar.gz"
+      sha256 "64b9c1e02983cc96b38fa878e7f150ce5f640880d024fcecc4d2cb3b61381ad5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.1/latt-v0.6.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b18d1bf80bdab00d2f0faed3b2ef43599e9deea00131f30f1ecd3c5effb9557d"
+      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.2/latt-v0.6.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0cb62b414eb774dea40d2e403def713a3b08dab5ab9bc9dd0c15a02ea75daf0a"
     end
     on_intel do
-      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.1/latt-v0.6.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0da6b1f1360c329fa015021467d818339a3a5face6efd3de672b852c0f707329"
+      url "https://github.com/julymetodiev/lantern-lattice/releases/download/v0.6.2/latt-v0.6.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "00c3b32f094fe38a25052b422efbbb1958e83ae74986310242ab73cbebd4a94c"
     end
   end
 
