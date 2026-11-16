@@ -33,53 +33,16 @@ class PostCortex < Formula
 
   def caveats
     <<~EOS
-      Post-Cortex has been installed:
+      Post-Cortex (pcx) is installed.
 
-      1. Configure MCP (once, globally)
+      1. Start the daemon:      pcx start
+      2. Check it:              pcx status
+      3. Point your agent at it:
+         Claude Code: set the post-cortex plugin's url to http://127.0.0.1:3737
+         Other agents: pcx setup --self-hosted
 
-      HTTP transport (recommended, requires daemon running)
-      claude mcp add --scope user --transport http post-cortex http://127.0.0.1:3737/mcp \
-        --header "X-PCX-Author: claude-code"
-
-      Or stdio transport (no daemon needed)
-      claude mcp add --scope user --transport stdio --env PC_AUTHOR=claude-code post-cortex -- pcx
-
-      This registers Post-Cortex for all projects on your machine.
-
-      2. Set Up Your Project
-
-      pcx setup
-
-      For stdio:
-      {
-        "mcpServers": {
-          "post-cortex": {
-            "command": "pcx"
-          }
-        }
-      }
-      For HTTP:
-      {
-        "mcpServers": {
-          "post-cortex": {
-            "type": "http",
-            "url": "http://localhost:3737/mcp"
-          }
-        }
-      }
-
-      Upgrading to 0.5: back up a SurrealDB backend first; the daemon adds the
-      full-text index and the message and card tables on start. RocksDB data
-      written by 0.5 is not readable by older binaries.
-      From 0.3.x: the 0.4 schema change is forward-only too, and a daemon bound
-      to 0.0.0.0 needs allowed_hosts in ~/.post-cortex/daemon.toml.
-      This binary has no rerankers (search mode fast); for local or Voyage
-      reranking: cargo install post-cortex-daemon \
-        --features surrealdb-storage,rerank,rerank-voyage
-
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-      Full Documentation: https://github.com/julymetodiev/post-cortex
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      Data: ~/.post-cortex/data · MCP: http://127.0.0.1:3737/mcp
+      Docs: https://docs.pcx.is/daemon/install/
     EOS
   end
 
